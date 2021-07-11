@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__left">
+            <i id="menu" class="material-icons">menu</i>
+            <img src="https://www.youtube.com/about/static/svgs/icons/brand-resources/YouTube-logo-full_color_light.svg?cache=72a5d9c"
+                alt="" />
+        </div>
+        <div class="class">
+            <form id="yt-form">
+                <div class="class d-flex">
+                    <input type="text" class="form-control search  ml-2" id="keyword-input" placeholder="Search" />
+                    <input type="number" class="form-control search  ml-2" id="maxresult-input"
+                        placeholder="Max Results" min="1" max="50" required>
+
+                    <select id="order-input" class="form-control search ml-2" required>
+                        <option value="">--SELECT ORDER--</option>
+                        <option value="date">Date</option>
+                        <option value="rating">Rating</option>
+                        <option value="relevance">Relevance</option>
+                        <option value="title">Title</option>
+                        <option value="viewCount" selected>View Count</option>
+                    </select>
+
+
+                    <input type="submit" class="btn btn-primary ml-2" value="search">
+                </div>
+
+
+            </form>
+        </div>
+        <div class="header__icons">
+
+            <i class="material-icons">videocam</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <i class="material-icons display-this">account_circle</i>
+        </div>
+    </div>
+    <div class="mainBody">
+        <!-- Sidebar Starts -->
+        <div class="sidebar">
+            <div class="sidebar__categories">
+                <div class="sidebar__category">
+                    <i class="material-icons">home</i>
+                    <span>Home</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">local_fire_department</i>
+                    <span>Trending</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">subscriptions</i>
+                    <span>Subcriptions</span>
+                </div>
+            </div>
+            <hr />
+            <div class="sidebar__categories">
+                <div class="sidebar__category">
+                    <i class="material-icons">library_add_check</i>
+                    <span>Library</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">history</i>
+                    <span>History</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">play_arrow</i>
+                    <span>Your Videos</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">watch_later</i>
+                    <span>Watch Later</span>
+                </div>
+                <div class="sidebar__category">
+                    <i class="material-icons">thumb_up</i>
+                    <span>Liked Videos</span>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="videos">
+
+
+
+
+            <!-- <form id="yt-form">
+                <div class="class">
+                    <input type="text" class="form-control search" id="keyword-input" placeholder="Search" />
+                    <input type="number" class="form-control search mt-2" id="maxresult-input" placeholder="Max Results"
+                        min="1" max="50" required>
+
+                    <select id="order-input" class="form-control search mt-2" required>
+                        <option value="">--SELECT ORDER--</option>
+                        <option value="date">Date</option>
+                        <option value="rating">Rating</option>
+                        <option value="relevance">Relevance</option>
+                        <option value="title">Title</option>
+                        <option value="viewCount" selected>View Count</option>
+                    </select>
+
+
+                    <input type="submit" class="btn btn-primary mt-2" value="search">
+                </div>
+
+
+            </form> -->
+
+            <div id="videoListContainer"></div>
+        </div>
+
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="scirpt.js"></script>
+</body>
+
+</html>
